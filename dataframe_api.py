@@ -1,11 +1,5 @@
-import pandas as pd
+data = [[2021, "test", "Albany", "M", 42]]
+columns = ["Year", "First_Name", "County", "Sex", "Count"]
 
-data = {
-  "calories": [420, 380, 390],
-  "duration": [50, 40, 45]
-}
-
-#load data into a DataFrame object:
-df = pd.DataFrame(data)
-
-print(df) 
+df1 = spark.createDataFrame(data, schema="Year int, First_Name STRING, County STRING, Sex STRING, Count int")
+display(df1)
