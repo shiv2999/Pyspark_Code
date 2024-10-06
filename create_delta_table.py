@@ -1,5 +1,5 @@
 from pyspark.sql.types import *
-
+#create table statement
 dt1 = (
     DeltaTable.create(spark)
     .tableName("testTable1")
